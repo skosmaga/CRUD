@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('adminlte.master');
-});
+Route::get('/question/create','QuestionController@create');
+Route::post('/questions', 'QuestionController@store');
+Route::get('/questions','QuestionController@index');
+Route::get('/answers/{question_id}','AnswerController@index');
+Route::post('/answers/{question_id}','AnswerController@store');

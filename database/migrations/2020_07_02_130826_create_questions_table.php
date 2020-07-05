@@ -18,7 +18,6 @@ class CreateQuestionsTable extends Migration
             $table->timestamps();
             $table->string('judul');
             $table->longText('isi');
-            $table->integer('answer_id');
         });
     }
 
